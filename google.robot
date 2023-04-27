@@ -12,8 +12,10 @@ Library    SeleniumLibrary
 *** Keywords ***
 ผู้ใช้งานเข้าไปยังหน้าแรกของระบบเพื่อค้นหา
     Open Browser   url=https://www.google.com/   
-    ...    browser=chrome
+    ...    browser=gc
     ...    options=add_experimental_option("detach", True)
     Maximize Browser Window
+    Wait Until Element Is Visible    name:q
+    Wait Until Element Is Visible    xpath://div[2]/div/img
     
 

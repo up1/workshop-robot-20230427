@@ -10,6 +10,9 @@ Library    SeleniumLibrary
     จะต้องเจอผลการค้นหาที่ถูกต้อง
 
 *** Keywords ***
+จะต้องเจอผลการค้นหาที่ถูกต้อง
+    Wait Until Page Contains    robot
+
 ผู้ใช้งานทำการค้นหาด้วยคำว่า robot
     Input Text   name:q   robot
     Press Keys   name:q   RETURN

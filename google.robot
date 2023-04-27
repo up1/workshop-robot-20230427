@@ -1,5 +1,5 @@
 *** Settings ***
-Library   SeleniumLibrary
+Library    SeleniumLibrary
 
 *** Variables ***
 
@@ -11,7 +11,9 @@ Library   SeleniumLibrary
 
 *** Keywords ***
 ผู้ใช้งานเข้าไปยังหน้าแรกของระบบเพื่อค้นหา
-    Open Browser    http://www.google.com    browser=chrome
+    Open Browser   url=https://www.google.com/   
+    ...    browser=chrome
     ...    options=add_experimental_option("detach", True)
+    Maximize Browser Window
     
 

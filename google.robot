@@ -10,6 +10,10 @@ Library    SeleniumLibrary
     จะต้องเจอผลการค้นหาที่ถูกต้อง
 
 *** Keywords ***
+ผู้ใช้งานทำการค้นหาด้วยคำว่า robot
+    Input Text   name:q   robot
+    Press Keys   name:q   RETURN
+
 ผู้ใช้งานเข้าไปยังหน้าแรกของระบบเพื่อค้นหา
     Open Browser   url=https://www.google.com/   
     ...    browser=gc

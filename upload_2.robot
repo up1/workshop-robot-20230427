@@ -1,6 +1,6 @@
 # How to run
 # $robot -v BASE_URL:http://www.google.com upload_2.robot
-#
+# $robot -i testing upload_2.robot
 *** Settings ***
 Library    SeleniumLibrary
 
@@ -8,7 +8,14 @@ Library    SeleniumLibrary
 ${BASE_URL}      http://nervgh.github.io/pages/angular-file-upload/examples/simple/
 
 *** Test Cases ***
+Success with upload 1 files
+    [Tags]  testing  feature_01
+    เข้ามายังหน้า upload files
+    Choose File   xpath://div[1]/input[2]  ${CURDIR}/data/1.txt
+    ทำการตรวจสอบ upload progress ของไฟล์ที่ "1" จะต้องเป็น "100"%
+
 Success with upload 3 files
+    [Tags]  done   feature_02
     เข้ามายังหน้า upload files
     เลือก 3 files เพื่อทำการ upload
     ทำการ upload และตรวจสอบสถานะของ file ที่ 1

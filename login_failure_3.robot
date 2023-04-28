@@ -1,5 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
+Suite Setup   ไปยังหน้า login    
 
 *** Test Cases ***
 Case login failure
@@ -12,7 +13,6 @@ Case login failure
 *** Keywords ***
 Flow login failure
     [Arguments]  ${user}   ${password}
-    ไปยังหน้า login
     ทำการ login ด้วย user="${user}" และ password="${password}"
     ไม่สามารถ login เข้าระบบได้
 

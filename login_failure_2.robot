@@ -1,6 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Test Template    Flow login failure
+Suite Setup  ไปยังหน้า login
 
 *** Test Cases ***
 #--------------------------------------------------------
@@ -14,7 +15,6 @@ Password ว่าง หรือ ไม่ได้กรอก        somkiat
 *** Keywords ***
 Flow login failure
     [Arguments]  ${user}   ${password}
-    ไปยังหน้า login
     ทำการ login ด้วย user="${user}" และ password="${password}"
     ไม่สามารถ login เข้าระบบได้
 

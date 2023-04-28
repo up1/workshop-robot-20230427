@@ -35,12 +35,12 @@
                         <input type="password" class="form-control" id="password-lgn" name="password">
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="login" >Submit</button>
                 </form>
             </div>
         </div>
         {{#if message }}
-            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+            <h4 class="alert alert-danger mt-4" id="login_result">{{message}}</h4>
         {{/if}}
     </div>
 </body>

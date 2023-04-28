@@ -2,6 +2,7 @@
 Library   SeleniumLibrary
 Test Template    Flow login failure
 Suite Setup  ไปยังหน้า login
+Suite Teardown   Close Browser
 
 *** Test Cases ***
 #--------------------------------------------------------
@@ -28,6 +29,8 @@ Flow login failure
     Click Element    xpath://form/button
     
 ไปยังหน้า login
-    Open Browser   http://167.71.200.223:3000/login   browser=chrome
+    Open Browser   http://167.71.200.223:3000/login   
+    ...    browser=chrome
+    ...    remote_url=http://157.245.205.30:4444/wd/hub
     Maximize Browser Window  
     

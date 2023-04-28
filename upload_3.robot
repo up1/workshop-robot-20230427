@@ -9,8 +9,11 @@ ${BASE_URL}      http://nervgh.github.io/pages/angular-file-upload/examples/simp
 *** Test Cases ***
 Success with upload 1 files
     [Tags]  testing  feature_01
+    Capture Page Screenshot
     Choose File   xpath://div[1]/input[2]  ${CURDIR}/data/1.txt
+    Capture Page Screenshot
     ทำการตรวจสอบ upload progress ของไฟล์ที่ "1" จะต้องเป็น "100"%
+    Capture Page Screenshot
 
 Success with upload 3 files
     [Tags]  done   feature_02

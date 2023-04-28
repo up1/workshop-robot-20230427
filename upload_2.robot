@@ -25,6 +25,7 @@ Check upload progress
 ทำการตรวจสอบ upload progress ของไฟล์ที่ "${row_no}" จะต้องเป็น "${expected_upload_progress}"%
     Click Element   xpath://table/tbody/tr[${row_no}]/td[5]/button[1]
     Wait Until Element Is Visible    xpath://div[@style="width: ${expected_upload_progress}%;"]
+
 ทำการ upload และตรวจสอบสถานะของ file ที่ 1
     Check upload progress  1  33
     ทำการตรวจสอบ upload progress ของไฟล์ที่ "1" จะต้องเป็น "33"%
